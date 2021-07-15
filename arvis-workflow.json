@@ -1,0 +1,62 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
+  "defaultIcon": "icon.png",
+  "category": "Productivity",
+  "creator": "Duoc Nguyen",
+  "description": "Find cool words",
+  "name": "arvis-cool-words",
+  "readme": "",
+  "version": "0.0.2",
+  "webAddress": "https://github.com/arvis-workflows/arvis-cool-words",
+  "enabled": true,
+  "commands": [
+    {
+      "type": "scriptFilter",
+      "command": "cno",
+      "title": "Find no like words",
+      "scriptFilter": "node index.js no",
+      "runningSubtext": "Hold on a sec until script work is done...",
+      "argType": "optional",
+      "withspace": true,
+      "actions": [
+        {
+          "type": "clipboard",
+          "modifiers": "normal",
+          "text": "{query}"
+        }
+      ]
+    },
+    {
+      "type": "scriptFilter",
+      "command": "cyes",
+      "title": "Find yes like words",
+      "scriptFilter": "node index.js yes",
+      "runningSubtext": "Hold on a sec until script work is done...",
+      "argType": "optional",
+      "withspace": true,
+      "actions": [
+        {
+          "type": "clipboard",
+          "modifiers": "normal",
+          "text": "{query}"
+        }
+      ]
+    },
+    {
+      "type": "scriptFilter",
+      "command": "cool",
+      "title": "Find cool words",
+      "scriptFilter": "node index.js {query}",
+      "runningSubtext": "Hold on a sec until script work is done...",
+      "argType": "optional",
+      "withspace": true,
+      "actions": [
+        {
+          "type": "clipboard",
+          "modifiers": "normal",
+          "text": "{query}"
+        }
+      ]
+    }
+  ]
+}
